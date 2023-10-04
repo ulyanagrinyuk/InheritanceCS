@@ -24,7 +24,7 @@ namespace Academy
             //Console.WriteLine(delimiter);
 
 			Graduate graduate = new Graduate("Hank", "Scherader", 40, "Criminalistic", "OBN", 80, 70, " How to catch Heisenbereg");
-   //         Console.WriteLine(graduate);
+           //Console.WriteLine(graduate);
 			//Console.WriteLine(delimiter);
 
 			Student tommy = new Student(human, "Theft", "Vice", 98, 99);
