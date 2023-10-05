@@ -1,16 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Academy
 {
 	internal class Program
 	{
+		
 		public static readonly string delimiter = "\n------------------\n";
 		static void Main(string[] args)
 		{
+
 			Human human = new Human("Montana", "Antonio", 30);
    //         Console.WriteLine(human);
 			//Console.WriteLine(delimiter);
@@ -33,12 +39,20 @@ namespace Academy
 
 			Human[] group = new Human[] {teacher, student, graduate, tommy,
 				new Teacher("Diaz", "Ricardo", 50, "Weapons distribution", 25)};
-       for(int i = 0; i < group.Length; i++)
+		  for(int i = 0; i < group.Length; i++)
 			{
 				//Console.WriteLine(group[i]);
 				group[i].Print();
                 Console.WriteLine(delimiter);
             }
+			string file = "group.txt";
+			StreamReader f = new StreamReader(file);
+			for (int i = 0; i < group.Length; i++)
+			{
+				string line = f.ReadLine();
+			}
+			f.Close();
+			Process.Start("group.txt", file);
 		}
 	}
 }
