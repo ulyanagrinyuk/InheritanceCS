@@ -50,8 +50,9 @@ namespace Academy
 			for (int i = 0; i < group.Length; i++)
 			{
 				string line = f.ReadLine();
-			}
-			f.Close();
+                Console.WriteLine($"Line {i+1}: {line}");
+            }
+			f.Close();// закрывает и разъединяет файл filestream, связанный с потоком.
 			Process.Start("group.txt", file);//вызываем фаил в качестве параметра. 
 		}
 	}
