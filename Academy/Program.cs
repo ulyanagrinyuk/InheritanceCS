@@ -52,7 +52,7 @@ namespace Academy
 				string line = f.ReadLine();
 			}
 			f.Close();
-			Process.Start("group.txt", file);//вызывая фаил в качестве параметра. 
+			Process.Start("group.txt", file);//вызываем фаил в качестве параметра. 
 		}
 	}
 }
