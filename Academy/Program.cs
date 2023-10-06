@@ -46,13 +46,13 @@ namespace Academy
                 Console.WriteLine(delimiter);
             }
 			string file = "group.txt";
-			StreamReader f = new StreamReader(file);
+			StreamReader f = new StreamReader(file);// для открытия, чтения и закрытия текстового файла.
 			for (int i = 0; i < group.Length; i++)
 			{
 				string line = f.ReadLine();
 			}
 			f.Close();
-			Process.Start("group.txt", file);
+			Process.Start("group.txt", file);//вызывая фаил в качестве параметра. 
 		}
 	}
 }
