@@ -1,0 +1,5 @@
+Academy.Teacher:	White, Walet, 50, Chemistry, 25
+Academy.Student:	Pinikman, Jessie, 25, Chemistry, WW_220, 90,99
+Academy.Graduate:	Hank, Scherader, 40, Criminalistic, OBN, 80,70, How to catch Heisenbereg
+Academy.Student:	Montana, Antonio, 30, Theft, Vice, 98,99
+Academy.Teacher:	Diaz, Ricardo, 50, Weapons distribution, 25

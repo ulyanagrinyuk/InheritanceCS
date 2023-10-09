@@ -33,7 +33,13 @@ namespace Academy
 		}
 		public override string ToString()
 		{
-			return base.ToString() + " " + $"{Speciality} {Experiance}";
+			return base.ToString() + ", " + $"{Speciality}, {Experiance}";
+		}
+		public override void Init(string[] values)
+		{
+			base.Init(values);
+			Speciality = values[4];
+			Experiance = Convert.ToInt32(values[5].Split(' ')[1]);
 		}
 		public override void Print()
 		{
