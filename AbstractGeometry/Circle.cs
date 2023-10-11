@@ -1,0 +1,47 @@
+﻿//using System;
+//using System.Collections.Generic;
+//using System.Linq;
+//using System.Text;
+//using System.Threading.Tasks;
+
+//namespace AbstractGeometry
+//{
+//	internal class Circle : Shape
+//	{
+//		double radius;
+//	}
+//	public double radius
+//	{
+//		get { return radius; }
+//		set
+//		{
+//			if (value < MIN_SIZE) value = MIN_SIZE;
+//			if (value < MAX_SIZE) value = MAX_SIZE;
+//			radius = value;
+//		}
+//	}
+//	public Circle
+//		 (double radius, int start_x, int start_y, int line_width, Color color
+//			) : base(start_x, start_y, line_width, color)
+//	{
+//		radius = value;
+//	}
+//	public override double GetArea()
+//	{
+//		return (radius * radius) * 3.14;
+//	}
+//	public override double GetPerimeter()
+//	{
+//		return 2 * 3.14 * radius;
+//	}
+//	public override void Info(PaintEventArgs e)
+//	{
+//		base.Info(e);
+//		Console.WriteLine($"Радиус: {radius}");
+//	}
+//	public override void Draw(PaintEventArgs e)
+//	{
+//		Pen pen = new Pen(Color, Line_width);
+//		e.Graphics.DrawEllipse(pen, Start_x, Start_y, (int)radius);
+//	}
+//}
