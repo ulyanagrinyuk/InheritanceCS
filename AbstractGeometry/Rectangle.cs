@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace AbstractGeometry
 {
-	class Rectangle : Shape
+	class Rectangle : Shape, IHaveDiagonal//, IDrawable
 	{
 		double side_a;
 		double side_b;
@@ -44,9 +44,9 @@ namespace AbstractGeometry
 		}
 		public override double GetArea()
 		{
-			return SideA*SideB;
+			return SideA * SideB;
 		}
-		public override double GetPerimiter()
+		public override double GetPerimeter()
 		{
 			return (SideA + SideB) * 2;
 		}
@@ -55,11 +55,18 @@ namespace AbstractGeometry
 			Pen pen = new Pen(Color, LineWidth);
 			e.Graphics.DrawRectangle(pen, StartX, StartY, (int)SideA, (int)SideB);
 		}
+		public void DrawDiagonal(PaintEventArgs e)
+		{
+			Pen pen = new Pen(Color, 1);
+			e.Graphics.DrawLine(pen, StartX, StartY, StartX + (int)SideA, StartY + (int)SideB);
+		}
 		public override void Info(PaintEventArgs e)
 		{
 			Console.WriteLine($"Сторона А: {SideA}");
 			Console.WriteLine($"Сторона B: {SideB}");
 			Console.WriteLine($"Диагональ: {GetDiagonal()}");
+			this.Draw(e);
+			this.DrawDiagonal(e);
 			base.Info(e);
 		}
 	}

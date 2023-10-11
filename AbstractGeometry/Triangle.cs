@@ -11,6 +11,7 @@
 //{
 //	internal class Triangle : Shape
 //	{
+
 //		double side_w;
 //		double side_s;
 //		double side_d;
@@ -46,8 +47,8 @@
 //		}
 //	}
 //	public Triangle
-//		(double side_w, double side_s, double side_d,int start_x, int start_y, int line_width, Color color
-//            ) :base (start_x, start_y, line_width, color)
+//		(double side_w, double side_s, double side_d, int start_x, int start_y, int line_width, Color color
+//			) : base(start_x, start_y, line_width, color)
 //	{
 //		Side_w = side_w;
 //		Side_s = side_s;

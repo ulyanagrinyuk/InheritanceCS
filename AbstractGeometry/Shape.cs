@@ -8,14 +8,16 @@ using System.Windows.Forms;
 
 namespace AbstractGeometry
 {
-	abstract class Shape
+	abstract class Shape 
 	{
-		static readonly int MIN_START_X = 10;
-		static readonly int MAX_START_X = 1000;
-		static readonly int MIN_START_Y = 10;
-		static readonly int MAX_START_Y = 700;
-		static readonly int MIN_LINE_WIDTH = 1;
-		static readonly int MAX_LINE_WIDTH = 32;
+		public static readonly int MIN_START_X = 10;
+		public static readonly int MAX_START_X = 1000;
+		public static readonly int MIN_START_Y = 10;
+		public static readonly int MAX_START_Y = 700;
+
+		public static readonly int MIN_LINE_WIDTH = 1;
+		public static readonly int MAX_LINE_WIDTH = 32;
+
 		public static readonly int MIN_SIZE = 20;
 		public static readonly int MAX_SIZE = 500;
 
@@ -45,7 +47,7 @@ namespace AbstractGeometry
 		}
 		public int LineWidth
 		{
-			get{return line_width;}
+			get { return line_width; }
 			set
 			{
 				if (value < MIN_LINE_WIDTH) value = MIN_LINE_WIDTH;
@@ -60,16 +62,15 @@ namespace AbstractGeometry
 			LineWidth = line_width;
 			Color = color;
 		}
-
 		public abstract double GetArea();
-		public abstract double GetPerimiter();
+		public abstract double GetPerimeter();
 		public abstract void Draw(PaintEventArgs e);
 		public virtual void Info(PaintEventArgs e)
 		{
-			Console.WriteLine($"Площадь фигуры: {this.GetArea()}");
-			Console.WriteLine($"Периметр фигуры: {this.GetPerimiter()}");
-			this.Draw(e);
-            Console.WriteLine();
-        }
+			Console.WriteLine($"Площадь  фигуры: {this.GetArea()}");
+			Console.WriteLine($"Периметр фигуры: {this.GetPerimeter()}");
+			//this.Draw(e);
+			Console.WriteLine();
+		}
 	}
 }
